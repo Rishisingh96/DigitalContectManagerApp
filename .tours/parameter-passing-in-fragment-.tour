@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Parameter passing in fragment ",
+  "steps": [
+    {
+      "file": "src/main/resources/templates/main.html",
+      "description": "Parameter passing ",
+      "line": 6
+    }
+  ]
+}

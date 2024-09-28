@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{main :: parent(~{::#content}, ~{::title},~{::script})}" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Server page</title>
+</head>
+<!-- <body> -->
+<!-- <h1>This is Services page</h1> -->
+<!-- <div th:replace="~{main::parent1('services one','services two')}"></div> -->
+
+
+<!-- <div th:replace="~{main::parents(~{::#second_content})}">
+        <section id="main_content">
+            <h1>This is Services page</h1>
+        </section>
+        <section id="second_content">
+            <h1>This is Services page</h1>
+        </section>
+    </div>  -->
+<!-- </body> -->
+<body>
+    <!-- <div id="content" class="border"> -->
+      <!-- Banner Section -->
+       <section id="content" class="text-gray-900 dark:text-white">
+        <h1 text-content="bg-blue-600">Welcome to service parent1-fragment</h1>
+       </section>
+    
+       <!-- <section class="bg-blue-600 text-white py-20 animate__animated animate__fadeInDown">
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-4">Welcome to Contact Manager</h2>
+          <p class="text-lg mb-8">Manage all your contacts effortlessly and securely in one place.</p>
+          <a href="#"
+             class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Get
+            Started</a>
+        </div>
+      </section> 
+     -->
+    
+    
+    
+      <!-- Footer Section -->
+      <!-- <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+          <p>&copy; 2024 Contact Manager. All rights reserved.</p>
+          <p>Follow us on <a href="#" class="text-blue-400">Facebook</a>, <a href="#"
+                                                                             class="text-blue-400">Twitter</a>, and <a
+                  href="#" class="text-blue-400">Instagram</a>.</p>
+        </div>
+      </footer> -->
+    <!-- </div> -->
+    <script>
+      console.log("service page");
+    </script>
+    </body>
+</html>

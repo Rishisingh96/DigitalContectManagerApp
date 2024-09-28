@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{main :: parent(~{::#content},~{::title},~{::script})}" xmlns:th="http://www.w3.org/1999/xhtml"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' |  SCM'">Profile Page</title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- sidebar -->
+
+      <!-- user is logged in : sidebar -->
+
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: user-sidebar}"></div>
+      </div>
+
+        <!-- <div>
+          <h1 class="sm:pl-64 pt-20 ">Welcome to my Profile</h1>
+        </div>  -->
+
+      <div class="sm:pl-64 pt-20" style="height: 1000px">
+        <div class="flex items-center justify-center md:pt-27 flex-col">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates suscipit corporis enim, doloribus repellendus consequatur obcaecati eum perspiciatis, reprehenderit quia ex corrupti tenetur, pariatur sed voluptate facilis! Officia, iste.</div>
+          <!--  profile card -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-2xl w-full">
+            <div class="flex flex-col items-center">
+                <img data-th-src="@{${loggedInUser.profilePic}}" src="images/Rishi.png" alt="Profile Photo" class="w-44 h-44 rounded-full shadow-lg object-cover mb-4">
+                <h2 class="text-2xl font-semibold mb-2" data-th-text=${loggedInUser.name}>User Name</h2>
+                <p class="text-gray-600 mb-2" data-th-text="${loggedInUser.email}">user.email@example.com</p>
+                <p class="text-gray-600 mb-2" data-th-text="${loggedInUser.phoneNumber}">123-456-7890</p>
+                <p class="text-gray-600 mb-4 text-center" data-th-text="${loggedInUser.about}">About the user...</p>
+                <div class="w-full flex justify-between">
+                    <p class="text-sm text-gray-500">Email Verified: <span class="font-medium text-gray-700" id="email-verified" data-th-text="${loggedInUser.emailVerified ? 'YES':'NO'}">No</span></p>
+                    <p class="text-sm text-gray-500">Phone Verified: <span class="font-medium text-gray-700" id="phone-verified" data-th-text="${loggedInUser.phoneVerified ? 'YES':'NO'}">No</span></p>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      console.log("this is profile page");
+    </script>
+  </body>
+</html>

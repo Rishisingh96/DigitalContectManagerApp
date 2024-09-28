@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+npx tailwindcss -i src/main/resources/static/css/input.css -o src/main/resources/static/css/output.css --watch
+*/
+
+/* E:\Spring and Spring Boot\MyProject\SmartContectManagerApp\SmartContectManagerApp\src\main\resources\static\input.css */
