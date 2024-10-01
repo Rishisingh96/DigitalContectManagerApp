@@ -1,16 +1,3 @@
-<!-- <div th:fragment="parent">
-    <h1>This parent </h1>
-    <p>My name is Rishi singh.</p>
-</div> -->
-
-<!-- Passing Parameter  -->
-<!-- <div class="parent1-fragment" th:fragment="parent1(x,y)">
-    <h1>This parent send parameter </h1>
-    <p>My name is Rishi singh.</p>
-    <h1>Value of x is <span th:text="${x}"></span></h1>
-    <h1>Value of y is <span th:text="${y}"></span>
-</div> -->
-
 <!DOCTYPE html>
 <html
   class="light"
@@ -46,10 +33,10 @@
       <div data-th-replace="~{user/userNavbar :: user-navbar}"></div>
     </div>
 
-    <!-- user is logged in : sidebar -->
-    <div th:if="${loggedInUser}">
+    <!-- user is logged in : sidebar we not use I want to only show in profile page -->  
+    <!-- <div th:if="${loggedInUser}">
       <div data-th-replace="~{user/sidebar :: user-sidebar}"></div>
-    </div>
+    </div> -->
 
     <!-- if user is logged in -->
     <div th:unless="${loggedInUser}">
@@ -78,3 +65,16 @@
     <th:block data-th-replace="${script}"></th:block>
   </body>
 </html>
+
+<!-- <div th:fragment="parent">
+    <h1>This parent </h1>
+    <p>My name is Rishi singh.</p>
+</div> -->
+
+<!-- Passing Parameter  -->
+<!-- <div class="parent1-fragment" th:fragment="parent1(x,y)">
+    <h1>This parent send parameter </h1>
+    <p>My name is Rishi singh.</p>
+    <h1>Value of x is <span th:text="${x}"></span></h1>
+    <h1>Value of y is <span th:text="${y}"></span>
+</div> -->
