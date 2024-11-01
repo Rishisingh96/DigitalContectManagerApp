@@ -2,6 +2,8 @@ package com.rishi.scm.forms;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.rishi.scm.validators.ValidFile;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -36,12 +38,21 @@ public class ContactForm {
     @NotBlank(message ="address is required")
     private String address;
 
-    
-    private String picture;
     private String description;
+
     private boolean favorite;
+
     private String websiteLink;
+
     private String linkedInLink;
+
+    // annotation create karenge jo file validate
+    // size
+    // resolution
+
+   @ValidFile(message = "Invalid File")
     private MultipartFile contactImage;
+
+    private String picture;
     
 }
