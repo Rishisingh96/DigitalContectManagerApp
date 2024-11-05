@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "smartcontectmanagerapp": "file:"
+    "smartcontectmanagerapp": "file:",
+    "sweetalert2": "^11.14.4"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.11"

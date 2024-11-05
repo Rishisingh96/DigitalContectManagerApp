@@ -13,7 +13,7 @@ public interface ContactService {
     Contact saveContact(Contact contact);
 
     //update contacts
-    Contact updateContact(Contact contact);
+    Contact update(Contact contact);
 
     //get all contacts
     List<Contact> getAll();
