@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SmartContectManagerAppApplication {
+public class DigitalContactManagerAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SmartContectManagerAppApplication.class, args);
+		SpringApplication.run(DigitalContactManagerAppApplication.class, args);
 	}
-
 }

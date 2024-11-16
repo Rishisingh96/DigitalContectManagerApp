@@ -108,6 +108,8 @@ public class myController {
     @RequestMapping(value = "/do-register", method = RequestMethod.POST)
     public String processRegister(@Valid @ModelAttribute UserForm userForm, BindingResult rBindingResult,
             HttpSession session) {
+
+        
         System.out.println("Processing registration");
         // fetch from data
         // UserForm
@@ -123,6 +125,7 @@ public class myController {
         user.setPassword(userForm.getPassword());
         user.setAbout(userForm.getAbout());
         user.setPhoneNumber(userForm.getPhoneNumber());
+        user.setEnabled(false);
         user.setProfilePic("src/main/resources/static/images/Rishi.png");
         User saveUser = userService.saveUser(user);
 
