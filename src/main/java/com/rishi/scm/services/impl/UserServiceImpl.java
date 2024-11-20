@@ -6,25 +6,41 @@ import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.rishi.scm.entity.User;
 import com.rishi.scm.helpers.AppConstants;
+import com.rishi.scm.helpers.Helper;
 import com.rishi.scm.helpers.ResourceNotFoundException;
 import com.rishi.scm.repository.UserRepository;
+import com.rishi.scm.services.EmailService;
 import com.rishi.scm.services.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
-    @Autowired
-    UserRepository userRepository;
+  
+    private UserRepository userRepository;
 
-    @Autowired
     private PasswordEncoder passwordEncoder;
 
+
+    private EmailService emailService;
+
+    private Helper helper;
+
+    
     private Logger logger = LoggerFactory.getLogger(this.getClass());
+    
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, EmailService emailService,
+            Helper helper) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.emailService = emailService;
+        this.helper = helper;
+    }
+
+    
 
     @Override
     public User saveUser(User user) {
@@ -39,7 +55,16 @@ public class UserServiceImpl implements UserService {
         // set the user role
         user.setRoleList(List.of(AppConstants.ROLE_USER));
         // user.setProfile(user)
-        return userRepository.save(user);
+
+        logger.info(user.getProvider().toString());
+
+        String emailToken = UUID.randomUUID().toString();
+        user.setEmailToken(emailToken);
+        User savedUser = userRepository.save(user);
+        String emailLink = Helper.getLinkForEmailVerification(emailToken);
+        emailService.sendEmail(savedUser.getEmail(), "Verify Account : Smart  Contact Manager", emailLink);
+        return savedUser;
+        // return userRepository.save(user);
     }
 
     @Override

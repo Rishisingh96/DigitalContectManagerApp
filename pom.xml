@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.rishi</groupId>
-    <artifactId>DigitalContectManagerApp</artifactId>
+    <artifactId>DigitalContactManagerApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>DigitalContectManagerApp</name>
-    <description>This is myProject fo learning purpurse</description>
+    <name>DigitalContactManagerApp</name>
+    <description>This is myProject fo learning purpure</description>
     <url/>
     <licenses>
         <license/>
@@ -30,6 +30,12 @@
         <java.version>22</java.version>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>

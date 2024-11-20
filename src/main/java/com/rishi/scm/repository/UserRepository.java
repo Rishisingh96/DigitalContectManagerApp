@@ -17,4 +17,6 @@ public interface UserRepository extends JpaRepository<User, String> {
     // custom query methods
     // custom finder methods
 
+    Optional<User> findByEmailToken(String id);
+
 }
