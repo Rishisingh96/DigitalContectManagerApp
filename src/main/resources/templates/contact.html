@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" th:replace="~{main :: parent(~{::#content}, ~{::title},~{::script})}" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
+<html
+  lang="en"
+  th:replace="~{main :: parent(~{::#content}, ~{::title},~{::script})}"
+  xmlns:th="http://www.w3.org/1999/xhtml"
+>
+  <head>
     <title>Contact page</title>
-</head>
-<div id="content" class="text-gray-900 dark:text-white">
-        <h2>Dynamic Content of About page</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, nulla illum! Debitis, eaque libero
-            accusantium incidunt culpa atque voluptates voluptatibus illum quisquam qui possimus velit, molestiae
-            facilis excepturi adipisci harum!</p>
-        <button>click on Dynamic content</button>
-</div>
-<script>
+  </head>
+  <div id="content" class="text-gray-900 dark:text-white">
+    <h2>
+      Dynamic Content of About page click hear for all contact
+      <a data-th-href="@{'/user/contacts'}"> click here </a>
+    </h2>
+    <p id="contact">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, nulla
+      illum! Debitis, eaque libero accusantium incidunt culpa atque voluptates
+      voluptatibus illum quisquam qui possimus velit, molestiae facilis
+      excepturi adipisci harum!
+    </p>
+    <button>click on Dynamic content</button>
+  </div>
+  <script>
     console.log("Contact page");
-</script>
-<body>
-</body>
+  </script>
+  <body></body>
 </html>

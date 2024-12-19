@@ -58,6 +58,7 @@ public class User implements UserDetails {
     private boolean enabled = false;
 
     private boolean emailVerified = false;
+    // private boolean emailVerified = false;
     private boolean phoneVerified = false;
     
 // SELF, GOOGLE, FACEBOOK, TWITTER, LINKEDIN, GITHUB
