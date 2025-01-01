@@ -1,3 +1,41 @@
+Digital Contact Manager Web App
+Duration: August 2024 – November 2024
+Technologies: Spring Boot, Spring MVC, Spring Security, Spring Data JPA, OAuth, MySQL, JavaScript, Thymeleaf, Tailwind CSS, Cloudinary
+
+Overview
+The Digital Contact Manager is a personal project aimed at creating a secure, user-friendly platform for managing personal contacts. The application includes advanced features like user authentication, contact management, image uploads, and email integration, offering a seamless experience for organizing and interacting with contacts.
+
+Features
+User Authentication:
+
+Supports traditional email and password login.
+Social login via Google and GitHub for ease of access.
+Email verification upon registration for added security.
+Contact Management:
+
+Add, update, delete, and view contact details.
+Secure image uploads to Cloudinary.
+Ability to mark contacts as favorites for quick access.
+Search & Pagination:
+
+Advanced search functionality to find contacts by name or details.
+Pagination ensures smooth navigation through large contact lists.
+Data Export:
+
+Easily export contacts to Excel, improving data accessibility.
+Themes:
+
+Dark and Light mode for a customizable user experience.
+Email Integration:
+
+Send emails directly from the app, with support for both text messages and attachments.
+Technical Stack
+Backend: Spring Boot, Spring MVC, Spring Security, Spring Data JPA, MySQL
+Frontend: Thymeleaf, JavaScript, Tailwind CSS
+Authentication: OAuth (Google, GitHub), JWT Tokens, Email Verification
+Storage: Cloudinary for image uploads
+Other Integrations: Email services for communication
+This application leverages Spring Security to ensure robust user authentication and authorization, while Tailwind CSS and Thymeleaf provide a responsive, user-friendly interface. Cloudinary handles secure image uploads, and the integration of Excel export enhances data management capabilities.
 ![1 DashBoard](https://github.com/user-attachments/assets/0080aa77-b622-4a9e-9000-c8ba19812466)
 
 LOGIN LOGOUT
